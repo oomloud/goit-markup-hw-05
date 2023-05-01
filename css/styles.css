@@ -384,37 +384,6 @@ a.logo {
   height: 64px;
 }
 
-/* Pseudoclass solution. Unfortunately such option is not accepted by autocheck :( */
-
-/* .features-item::before {
-  content: '';
-  display: block;
-  height: 112px;
-  background-color: var(--lightBackgroundColor);
-  border-radius: 4px;
-  background-size: auto 64px;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  margin-bottom: 8px;
-} 
-
-.icon-strategy::before {
-  background-image: url(../images/02_features/01_antenna.svg);
-}
-
-.icon-punctuality::before {
-  background-image: url(../images/02_features/02_clock.svg);
-}
-
-.icon-diligence::before {
-  background-image: url(../images/02_features/03_diagram.svg);
-}
-
-.icon-technology::before {
-  background-image: url(../images/02_features/04_astronaut.svg);
-}
-*/
-
 /* Section 3 - Services */
 .services {
   display: flex;
@@ -782,7 +751,11 @@ a.logo {
     border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-close:hover,
+.modal-close:hover {
+  background-color: var(--pressedStateColor);
+  border: none;
+}
+
 .modal-close:focus {
   background-color: var(--pressedStateColor);
   border: none;
@@ -795,7 +768,10 @@ a.logo {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-close:hover .modal-close-icon,
+.modal-close:hover .modal-close-icon {
+  fill: var(--bodyColor);
+}
+
 .modal-close:focus .modal-close-icon {
   fill: var(--bodyColor);
 }
