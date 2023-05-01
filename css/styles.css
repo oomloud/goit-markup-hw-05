@@ -754,11 +754,11 @@ a.logo {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-hidden .modal-window {
   transform: translate(-50%, -50%) scale(1.5);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close {
@@ -783,7 +783,7 @@ a.logo {
 
 .modal-close:hover,
 .modal-close:focus {
-  background-color: #404bbf;
+  background-color: var(--pressedStateColor);
   border: none;
 }
 
@@ -796,5 +796,5 @@ a.logo {
 
 .modal-close:hover .modal-close-icon,
 .modal-close:focus .modal-close-icon {
-  fill: #ffffff;
+  fill: var(--bodyColor);
 }
