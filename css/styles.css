@@ -113,9 +113,7 @@ p {
   border-radius: 50% 50%;
 
   /* transition values */
-  transition-property: background-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-link:hover,
@@ -326,7 +324,7 @@ a.logo {
 }
 
 /* Button - Main page */
-.button {
+.btn-order {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   line-height: 1.5em;
@@ -347,13 +345,11 @@ a.logo {
   margin: 0 auto;
 
   /* transition values */
-  transition-property: color, background-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.button:hover,
-.button:focus {
+.btn-order:hover,
+.btn-order:focus {
   color: var(--bodyColor);
   background-color: var(--pressedStateColor);
 }
@@ -515,7 +511,7 @@ a.logo {
 
   /* transition values */
   transition-property: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customers-list-link:hover,
@@ -652,12 +648,8 @@ a.logo {
   flex-direction: column;
 }
 
-.portfolio-item-link {
-  display: contents;
-}
-
-.portfolio-item:hover,
-.portfolio-item:focus {
+.portfolio-item-link:hover,
+.portfolio-item-link:focus {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   /* transition values */
@@ -738,8 +730,8 @@ a.logo {
   display: flex;
   justify-content: center;
 
-  transition: visibility 500ms cubic-bezier(0.4, 0, 0.2, 1),
-    opacity 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: visibility 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-hidden {
@@ -748,12 +740,8 @@ a.logo {
   pointer-events: none;
 }
 
-.backdrop.is-hidden .modal-window {
-  transform: translate(-50%, 150%);
-}
-
 .modal-window {
-  height: 584px;
+  min-height: 576px;
   width: 408px;
   background-color: var(--modalWindow);
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
@@ -767,6 +755,10 @@ a.logo {
 
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop.is-hidden .modal-window {
+  transform: translate(-50%, -50%) scale(1.5);
 }
 
 .modal-close {
