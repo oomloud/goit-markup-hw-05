@@ -751,12 +751,9 @@ a.logo {
     border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-close:hover {
-  background-color: var(--pressedStateColor);
-  border: none;
-}
-
+.modal-close:hover,
 .modal-close:focus {
+  color: var(--bodyColor);
   background-color: var(--pressedStateColor);
   border: none;
 }
@@ -766,12 +763,4 @@ a.logo {
   width: 8px;
   height: 8px;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.modal-close:hover .modal-close-icon {
-  fill: var(--bodyColor);
-}
-
-.modal-close:focus .modal-close-icon {
-  fill: var(--bodyColor);
 }
