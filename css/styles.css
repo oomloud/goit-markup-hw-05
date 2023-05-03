@@ -752,9 +752,9 @@ a.logo {
 
 .modal-close:hover,
 .modal-close:focus {
-  background-color: var(--pressedStateColor);
+  background-color: #404bbf;
   border: none;
-  color: var(--bodyColor);
+  color: #ffffff;
 }
 
 .modal-close-icon {
